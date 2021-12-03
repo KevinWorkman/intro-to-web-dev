@@ -1,0 +1,8 @@
+#output {
+  /* Output starts invisible */
+  display: none;
+}
+
+#adjective-one-output {
+  font-weight: bold;
+}
