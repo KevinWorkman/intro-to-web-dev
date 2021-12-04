@@ -4,7 +4,7 @@
 function fillOutputs() {
 
   // Get the adjective input element
-  const adjectiveOneInput = document.getElementById('ajdective-one-input');
+  const adjectiveOneInput = document.getElementById('adjective-one-input');
   // Get the text from the input element
   const adjectiveOne = adjectiveOneInput.value;
 
