@@ -1,4 +1,4 @@
-# Week 4: If Statements
+# Week 5: If Statements
 
 Modify `index.html` and `script.js` to create an interactive quiz.
 
