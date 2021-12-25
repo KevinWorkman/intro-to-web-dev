@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task List</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js"></script>
+  </head>
+  <body onload="loadContent();">
+    <h1>Task List</h1>
+    <div id="table-container"></div>
+    <hr>
+    <p>Shortest task: <span id="shortest-task"></span></p>
+    <hr>
+    <div>
+      <h1>New Task</h1>
+      Label: <input type="text" id="label-input"/>
+      <br><br>
+      Time: <input type="number" id="time-input" />
+      <br><br>
+      <button onclick="addNewTask('test');">Add</button>
+    </div>
+  </body>
+</html>
