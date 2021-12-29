@@ -14,6 +14,8 @@ for your business.
 
 Your website should contain at least the following:
 
+- At least 3 pages that link between each other. You can use the example files
+  in this directory, or you can delete them and come up with your own.
 - 3 HTML elements in a flexbox container with `flex-direction: column`
 - 3 HTML elements in a flexbox container with `flex-direction: row`
 - 1 HTML element that displays differently based on the width of the window
