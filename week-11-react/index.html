@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Task List</title>
+
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script type="text/babel">
+      // Top-level Component that maintains a list of tasks for a to-do list.
+      class App extends React.Component {
+        // React uses its *state* to store data and rendering the page.
+        state = {
+          tasks: [
+            {label: 'Water plants', time: 3},
+            {label: 'Homework', time: 2},
+            {label: 'Laundry', time: 1},
+          ]
+        };
+
+        // Removes a task at a specific index.
+        // This must be an arrow function, see this for more info:
+        // https://javascript.plainenglish.io/traditional-versus-arrow-functions-in-javascript-classes-35f958b1a492
+        removeTask = (index) => {
+          // Remove the index from the array.
+          const newTasks = this.state.tasks.filter((task, i) => {
+            return i !== index
+          });
+
+          // Set the state to re-render the app.
+          this.setState({
+            tasks: newTasks
+          });
+        };
+
+        // Adds a new task to the list.
+        // This must be an arrow function, see this for more info:
+        // https://javascript.plainenglish.io/traditional-versus-arrow-functions-in-javascript-classes-35f958b1a492
+        addTask = (newTask) => {
+          // Use the spread operator to create a new array with the new task.
+          const newTasks = [...this.state.tasks, newTask]
+
+          // Set the state to re-render the app.
+          this.setState({tasks: newTasks});
+        }
+
+        // Renders the whole page.
+        render() {
+          return (
+            <div className="container">
+              <TaskTable tasks={this.state.tasks} removeTask={this.removeTask} />
+              <NewTaskForm addTask={this.addTask} />
+            </div>
+          )
+        }
+      }
+
+      // Component that renders a list of to-do tasks as a table.
+      class TaskTable extends React.Component {
+        render() {
+          const tasks = this.props.tasks;
+          const removeTask = this.props.removeTask;
+
+          // Convert the task array into an array of <tr> elements.
+          const tableRows = [];
+          for (let i = 0; i < tasks.length; i++) {
+            tableRows.push(
+              <tr key={i}>
+                <td>{i}</td>
+                <td>{tasks[i].label}</td>
+                <td>{tasks[i].time}</td>
+                <td>
+                  <button onClick={() => {removeTask(i)}}>
+                    Remove
+                  </button>
+                </td>
+              </tr>
+            );
+          }
+
+          // Render the table.
+          return (
+            <table>
+              <TableHeader />
+              <tbody>
+                {tableRows}
+              </tbody>
+            </table>
+          )
+        }
+      }
+
+      // Renders a table header.
+      // This is an example of a "simple component", which is a function instead
+      // of a class. Simple components are handy when your component doesn't
+      // have state to keep track of.
+      function TableHeader() {
+        return (
+          <thead>
+            <tr>
+              <th>Index</th>
+              <th>Label</th>
+              <th>Time</th>
+            </tr>
+          </thead>
+        );
+      }
+
+      // Component that renders a form that lets users add a new task.
+      class NewTaskForm extends React.Component {
+        // Empty task for initializing the form.
+        emptyTask = {label: '', time: 0};
+
+        // The form's state is a single task.
+        state = {
+          task: this.emptyTask
+        };
+
+        render() {
+          return (
+            <div>
+              <h1>New Task</h1>
+              Label:
+              <input type="text" value={this.state.task.label}
+                     onChange={(event) => this.updateLabel(event)} />
+              <br/><br/>
+              Time:
+              <input type="number" value={this.state.task.time}
+                     onChange={(event) => this.updateTime(event)} />
+              <br/><br/>
+              <button onClick={() => {this.addTask()}}>
+                Add
+              </button>
+            </div>
+          );
+        }
+
+        // Sets the label of the form's task.
+        updateLabel(event) {
+          const oldTask = this.state.task;
+          const newTask = {label: event.target.value, time: oldTask.time};
+          this.setState({task: newTask});
+        }
+
+        // Sets the time of the form's task.
+        updateTime(event) {
+          const oldTask = this.state.task;
+          const newTask = {label: oldTask.label, time: event.target.value};
+          this.setState({task: newTask});
+        }
+
+        // Adds the form's task to the list.
+        addTask() {
+          this.props.addTask(this.state.task);
+
+          // Reset the form to show an empty task.
+          this.setState({task: this.emptyTask});
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'));
+    </script>
+  </head>
+
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
