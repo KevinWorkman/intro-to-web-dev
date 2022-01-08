@@ -1,13 +1,9 @@
 # Intro to Web Development
 
-(👷‍♀️ under construction 👷‍♂️)
-
 This repository contains the homework assignments for Introduction to Web Development.
 
-Each week, read / watch that week's lesson, and then work through the projects in the corresponding directory.
+Class homepage: http://localhost:4000/teaching/intro-to-web-dev
 
-# Getting Started
+Each week, read / watch that week's lesson, and then work through the projects in the corresponding directory in this repo.
 
-Step 1: [Fork this repository](https://github.com/KevinWorkman/intro-to-web-dev/fork) to make your own copy of these files.
-
-Step 2: Coming soon!
+To get started, work through the week 1 setup guides: https://happycoding.io/teaching/intro-to-web-dev/week-01-setup-and-html
