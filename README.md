@@ -2,7 +2,7 @@
 
 This repository contains the homework assignments for Introduction to Web Development.
 
-Class homepage: http://localhost:4000/teaching/intro-to-web-dev
+Class homepage: https://happycoding.io/teaching/intro-to-web-dev
 
 Each week, read / watch that week's lesson, and then work through the projects in the corresponding directory in this repo.
 
