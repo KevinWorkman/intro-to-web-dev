@@ -1,3 +1,15 @@
-.example {
+/* Element selector that gives every p element a monospace font. */
+p {
+  font-family: monospace;
+}
+
+/* Class selector that gives elements with this class a big bold style. */
+.big {
+  font-size: large;
+  font-weight: bold;
+}
+
+/* ID selector that gives the element with this ID a red style. */
+#boldly {
   color: red;
 }
