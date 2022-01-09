@@ -22,7 +22,7 @@ sections:
 - Words that aren't the 10 most common words
 
 There are ways to do some of this without for loops, but the goal of this
-project is to practice using for loops. When you're done, your code should
+project is to practice using for loops. So when you're done, your code should
 contain at least 5 for loops, not counting the existing example.
 
 Modifying the CSS is optional, so make sure your JavaScript works first.

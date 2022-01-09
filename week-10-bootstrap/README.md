@@ -13,8 +13,8 @@ When you're done, your website should contain at least the following:
 
 - 3 pages that link between each other
 - 1 Bootstrap container
-- 3 Bootstrap rows with at least 2 columns each
-- 5 Bootstrap components
+- 2 Bootstrap rows with at least 2 columns each
+- 4 Bootstrap components
 
 Optional bonus challenge: if you finish all of the above and want some more
 practice, try adding Bootstrap to previous projects, or look for other UI

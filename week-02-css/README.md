@@ -18,6 +18,7 @@ Then modify `styles.css` to style your text.
 
 Your `styles.css` file should contain at least the following:
 
-- 3 element selectors, e.g. change the body element's background color
+- 3 element selectors, e.g. change the body element's background color or set
+  the font size of every `<p>` element
 - 2 ID selectors, e.g. change the font of the top heading on your page
 - 5 class selectors, e.g. make every noun on the page bold

@@ -16,6 +16,7 @@ When you're done, your code should contain:
 - A React app that shows a list of objects. The example in this directory shows
   a list of tasks in a table, but you can show any kind of data you want using
   any HTML elements.
+- Two React components.
 - The ability to add a new object to the list.
 - The ability to remove an object from the list.
 

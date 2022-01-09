@@ -12,11 +12,11 @@ HTML to render your visualization to the page.
 When you're done, your code should contain at least the following:
 
 - Calling the `fetch()` function and parsing the resulting JSON
-- Usage of at least 5 properties of your article. Some interesting options might
+- Usage of at least 4 properties of your article. Some interesting options might
   be text, categories, externallinks, links, images, sections, and iwlinks. See
   this page for a full list:
   https://en.wikipedia.org/w/api.php?action=help&modules=parse
-- At least 3 different CSS rules that style content.
+- At least 5 different CSS rules that style content.
 
 Write your code one small piece at a time. Don't try to get everything working
 at once! Write the code for displaying a single piece of data for your article,
