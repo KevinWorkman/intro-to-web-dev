@@ -2,7 +2,7 @@
 
 Modify `index.html` to introduce yourself.
 
-Try to add at least 5 new tags that aren't already in the file. Here are some options:
+Add at least 5 new tags that aren't already in the file. Here are some options:
 
 - Add a link to your social media profiles, or to your favorite Wikipedia article.
 - Show a list of your favorite books, songs, or movies.
