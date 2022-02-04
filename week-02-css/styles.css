@@ -1,15 +1,26 @@
-/* Element selector that gives every p element a monospace font. */
+
 p {
-  font-family: monospace;
+  font: italic small-caps bold 16px/2 cursive;
+font-size: large
+color: blue;
 }
 
-/* Class selector that gives elements with this class a big bold style. */
-.big {
-  font-size: large;
-  font-weight: bold;
+li {
+font: 1.2em "Fira Sans", serif;
+
 }
 
-/* ID selector that gives the element with this ID a red style. */
-#boldly {
-  color: red;
+
+
+.purple {
+ color: rebeccapurple;
+}
+
+#tasty {
+  background-color: orange;
+  border: solid;
+}
+
+.color2 {
+color: rgb(214, 122, 127);
 }
