@@ -5,7 +5,8 @@ div {
 
 .Biggrid {
   display: grid;
-  grid-template-columns: 200px 3.85fr 1fr;
+  grid-template-columns: 200px 3.85fr 250px;
+  grid-template-rows: 350px
   gap: 10px;
   Border: thin solid rebeccapurple;
 }
