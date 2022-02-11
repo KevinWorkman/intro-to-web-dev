@@ -1,12 +1,35 @@
-nav {
-  border: thin solid black;
-}
-
 div {
+  padding: 10px;
   border: thin solid black;
-  margin: 25px 0;
 }
 
-footer {
-  border: thin solid black;
+.Biggrid {
+  display: grid;
+  grid-template-columns: 200px 200px 180px;
+  gap: 10px;
+  Border: thin solid rebeccapurple;
+}
+
+.MidFlex {
+  grid-template-columns: auto auto;
+  display: flex;
+  gap: 10px;
+  border: thick solid black;
+}
+
+.Left{
+  flex-grow: 1
+
+}
+
+
+
+.Right{
+  flex-grow: 2;
+  height: 100px
+}
+
+#title {
+  font-size: 48;
+  font-style: oblique;
 }
