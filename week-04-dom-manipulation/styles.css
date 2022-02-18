@@ -3,6 +3,14 @@
   display: none;
 }
 
-#adjective-one-output {
+#adjective-One-Output {
   font-weight: bold;
+}
+#noun-one-output {font-weight: bold;
+}
+#noun-two-output {font-weight: bold;
+}
+#verb-one-output {font-weight: bold;
+}
+#adverb-one-output {font-weight: bold;
 }
