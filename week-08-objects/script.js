@@ -1,27 +1,38 @@
 // Array of objects representing a todo list.
 // Modify this array to contain your own list.
-const taskArray = [
-  {label: 'Water plants', time: 3},
-  {label: 'Homework', time: 2},
-  {label: 'Laundry', time: 1},
+const FoodArray = [
+  {label: 'Pizza', Greasy: 4, Sweetness: 1,Saltiness:3 },
+  {label: 'Cucumber', Greasy: 0, Sweetness: 1,Saltiness:0},
+  {label: 'Chicken wings', Greasy: 2, Sweetness: 2,Saltiness:3},
+  {label: 'Italian Sausage', Greasy: 5, Sweetness: 3,Saltiness:2},
+  {label: 'Stir Fry', Greasy: 2, Sweetness: 4,Saltiness:4},
+  {label: 'Cheeseburger', Greasy: 3, Sweetness: 1,Saltiness:3},
+  {label: 'Cereal', Greasy: 0, Sweetness: 5,Saltiness:2},
+  {label: 'French Fries', Greasy: 1, Sweetness: 1,Saltiness:5},
+  {label: 'Shrimp', Greasy: 1, Sweetness: 1,Saltiness:0},
+  {label: 'Fish', Greasy: 1, Sweetness: 1,Saltiness:2},
 ];
 
 // Loads the content into the page.
 function loadContent() {
   // This line of code sorts the array alphabetically by the task labels.
   // Modify this to sort your data by a different field, or just delete it.
-  taskArray.sort((a, b) => compare(a.label, b.label));
+  FoodArray.sort((a, b) => compare(a.label, b.label));
 
   loadTable();
-  loadShortestTask();
+  loadLeastGreasy();
+  loadAverageGreasy();
 }
 
 // Adds a task to the array and reloads the page content.
-function addNewTask() {
-  const newTaskLabel = document.getElementById('label-input').value;
-  const newTaskTime = document.getElementById('time-input').value;
-  const newTask = {label: newTaskLabel, time: newTaskTime };
-  taskArray.push(newTask);
+function addNewFood() {
+  const newFoodLabel = document.getElementById('label-input').value;
+  const newFoodGreasy = document.getElementById('Greasy-input').value;
+  const newFoodSweetness = document.getElementById('Sweetness-input').value;
+  const newFoodSaltiness = document.getElementById('Saltiness-input').value;
+  const newFood = {label: newFoodLabel, Greasy: newFoodGreasy,
+      Sweetness: newFoodSweetness, Saltiness: newFoodSaltiness};
+  FoodArray.push(newFood);
 
   loadContent();
 }
@@ -33,17 +44,21 @@ function loadTable() {
   // Create a header row.
   const headerRowElement = document.createElement('tr');
   headerRowElement.appendChild(createElement('th', 'Index'));
-  headerRowElement.appendChild(createElement('th', 'Label'));
-  headerRowElement.appendChild(createElement('th', 'Time'));
+  headerRowElement.appendChild(createElement('th', 'Food'));
+  headerRowElement.appendChild(createElement('th', 'Greasiness (0-5)'));
+  headerRowElement.appendChild(createElement('th', 'Sweetness (0-5)'));
+  headerRowElement.appendChild(createElement('th', 'Saltiness (0-5)'));
   tableElement.appendChild(headerRowElement);
 
   // Iterate over the array and create a table row for each object.
-  for (let i = 0; i < taskArray.length; i++) {
-    const task = taskArray[i];
+  for (let i = 0; i < FoodArray.length; i++) {
+    const Food = FoodArray[i];
     const rowElement = document.createElement('tr');
     rowElement.appendChild(createElement('td', i));
-    rowElement.appendChild(createElement('td', task.label));
-    rowElement.appendChild(createElement('td', task.time));
+    rowElement.appendChild(createElement('td', Food.label));
+    rowElement.appendChild(createElement('td', Food.Greasy));
+    rowElement.appendChild(createElement('td', Food.Sweetness));
+    rowElement.appendChild(createElement('td', Food.Saltiness));
     tableElement.appendChild(rowElement);
   }
 
@@ -53,20 +68,36 @@ function loadTable() {
 }
 
 // Displays the name of the shortest task.
-function loadShortestTask(){
+function loadLeastGreasy(){
   // Assume the first task is shortest
-  let shortestTask = taskArray[0];
+  let Leastgreasy = FoodArray[0];
 
   // Starting with the second task, look for a shorter task
-  for (let i = 1; i < taskArray.length; i++) {
-    const task = taskArray[i];
+  for (let i = 1; i < FoodArray.Greasy; i++) {
+    const Food = FoodArray[i];
     // If this task is shorter than the previous shortest, it's now the shortest
-    if(task.time < shortestTask.time) {
-      shortestTask = task;
+    if(food.greasy < LeastGreasy.greasy) {
+      LeastGreasy = food;
     }
   }
-  document.getElementById('shortest-task').innerText = shortestTask.label;
+  document.getElementById('Least-Greasy').innerText = Leastgreasy.label;
 }
+
+function loadAverageGreasy (){
+  let total = 0;
+ for(let i = 0; i <FoodArray.length; i++){
+   const Food = FoodArray[i];
+    total += Number(Food.greasy);
+
+ }
+  let Average = total / FoodArray.length;
+  document.getElementById('average-Greasy').innerText = Average
+  }
+
+
+
+
+
 
 // Helper function that creates an element that contains text content.
 function createElement(tag, text) {

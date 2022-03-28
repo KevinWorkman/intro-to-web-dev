@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Task List</title>
+    <title>My Favorite Food List</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
     <script src="script.js"></script>
   </head>
   <body onload="loadContent();">
-    <h1>Task List</h1>
+    <h1>My Favorite Food List</h1>
     <div id="table-container"></div>
     <hr>
-    <p>Shortest task: <span id="shortest-task"></span></p>
+    <p>Least Greasy: <span id="Least-Greasy"></span></p>
+    <p>Average Greasiness: <span id="Average-Greasy"></span></p>
     <hr>
     <div>
-      <h1>New Task</h1>
-      Label: <input type="text" id="label-input"/>
+      <h1>New Food</h1>
+      Food: <input type="text" id="label-input"/>
       <br><br>
-      Time: <input type="number" id="time-input" />
+      Greasiness (0-5): <input type="number" id="greasy-input" />
       <br><br>
-      <button onclick="addNewTask();">Add</button>
+      Sweetness (0-5): <input type="text" id="sweetness-input"/>
+      <br><br>
+      Saltiness (0-5): <input type="number" id="saltiness-input" />
+      <br><br>
+      <button onclick="addNewFood();">Add</button>
     </div>
   </body>
 </html>
