@@ -23,6 +23,7 @@ async function loadContent() {
 
   loadImages(article.images);
   loadExternal(article.externallinks)
+  loadLanguages(article.langlinks)
 
 }
 
@@ -75,8 +76,6 @@ async function loadLanguages(langLinks){
         linksElement.appendChild(liElement);
 
       }
-
-
 
 
 }
