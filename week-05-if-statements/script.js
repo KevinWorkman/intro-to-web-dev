@@ -6,11 +6,11 @@ function submitAnswerOne() {
   // Get the text from answer one's input element
   const answerOne = answerOneInput.value;
 
-  if(answerOne == 'Appalachian Mountains') {
+  if(answerOne == 'Appalachian Mountains', 'Appalachian', 'appalachian mountains', 'appalachian', 'Appalachians', 'appalachians') {
     alert("That's right!");
     hide('question-one');
     show('question-two');
-  } else if(answerOne == 'Apalachian Mountains') {
+  } else if(answerOne == 'Apalachian Mountains', 'Apalachian', 'apalachian mountains', 'apalachian', 'Apalachians', 'apalachians') {
     alert('You missed a p');
   } else {
     alert('It is not only in Pennsylvania')
@@ -44,7 +44,7 @@ if(answerThree == 'seven') {
   alert("That's right!");
   hide('question-three');
   show('question-four');
-} else if(answerThree == 'what is the answer?') {
+} else if(answerThree == 'what is the answer?', 'What is the answer?') {
   alert('Its seven');
 } else {
   alert('Try asking "what is the answer?"')
@@ -55,7 +55,7 @@ function submitAnswerFour() {
   const answerFourInput = document.getElementById('answer-four-input');
   // Get the number from answer two's input element
   const answerFour = answerFourInput.value;
-if(answerFour == 'Mercury') {
+if(answerFour == 'Mercury', 'mercury') {
   alert("That's right!");
   hide('question-four');
   show('question-five');
