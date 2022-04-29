@@ -33,3 +33,6 @@ Border: thick solid black;
 .ProfilePic {
   border: 12px solid #555;
 }
+Body {
+  background-image: url('Background.jpg');
+}
