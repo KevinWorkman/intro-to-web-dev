@@ -6,14 +6,14 @@ function submitAnswerOne() {
   // Get the text from answer one's input element
   const answerOne = answerOneInput.value;
 
-  if(answerOne == 'cat') {
+  if(answerOne == 'Appalachian Mountains', 'Appalachian', 'appalachian mountains', 'appalachian', 'Appalachians', 'appalachians') {
     alert("That's right!");
     hide('question-one');
     show('question-two');
-  } else if(answerOne == 'dog') {
-    alert('Close, but my favorite animal runs away from dogs.');
+  } else if(answerOne == 'Apalachian Mountains', 'Apalachian', 'apalachian mountains', 'apalachian', 'Apalachians', 'apalachians') {
+    alert('You missed a p');
   } else {
-    alert('Wrong! Hint: My favorite animal meows.')
+    alert('It is not only in Pennsylvania')
   }
 }
 
@@ -25,16 +25,75 @@ function submitAnswerTwo() {
   // Get the number from answer two's input element
   const answerTwo = answerTwoInput.value;
 
-  if(answerTwo == 42) {
+  if(answerTwo == 4) {
     alert("That's right!");
     hide('question-two');
-    show('done');
-  } else if(answerTwo < 42) {
-    alert('The answer is higher.');
+    show('question-three');
+  } else if(answerTwo < 4) {
+    alert('Umm, you should know this');
   } else {
-    alert('The answer is lower.')
+    alert('Do not expect a hint, you probably made a typo')
   }
 }
+function submitAnswerThree() {
+  // Get answer two's input element
+  const answerThreeInput = document.getElementById('answer-three-input');
+  // Get the number from answer two's input element
+  const answerThree = answerThreeInput.value;
+if(answerThree == 'seven') {
+  alert("That's right!");
+  hide('question-three');
+  show('question-four');
+} else if(answerThree == 'what is the answer?', 'What is the answer?') {
+  alert('Its seven');
+} else {
+  alert('Try asking "what is the answer?"')
+}
+}
+function submitAnswerFour() {
+  // Get answer two's input element
+  const answerFourInput = document.getElementById('answer-four-input');
+  // Get the number from answer two's input element
+  const answerFour = answerFourInput.value;
+if(answerFour == 'Mercury', 'mercury') {
+  alert("That's right!");
+  hide('question-four');
+  show('question-five');
+} else if(answerFour == 'Pluto') {
+  alert('Sorry, he has demoted ages ago');
+} else {
+  alert('Its not Mars')
+}
+}
+function submitAnswerFive() {
+  // Get answer two's input element
+  const answerFiveInput = document.getElementById('answer-five-input');
+  // Get the number from answer two's input element
+  const answerFive = answerFiveInput.value;
+if(answerFive == 4) {
+  alert("That's right!");
+  hide('question-five');
+  show('done');
+} else if(answerFive == 7) {
+  alert('Close, it was the question before that one.');
+} else {
+  alert('It was a number')
+}
+}
+
+var input = document.getElementById("myInput");
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+
+
+
+
+
+
 
 // Helper function that takes an ID and shows the element with that ID.
 function show(id) {

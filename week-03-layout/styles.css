@@ -1,12 +1,60 @@
-nav {
-  border: thin solid black;
-}
-
 div {
+  padding: 10px;
   border: thin solid black;
-  margin: 25px 0;
 }
 
-footer {
-  border: thin solid black;
+.Biggrid {
+  display: grid;
+  grid-template-columns: 200px 3.85fr 250px;
+  grid-template-rows: 350px
+  gap: 10px;
+  Border: thin solid rebeccapurple;
+}
+
+.MidFlex {
+  grid-template-columns: auto auto;
+  display: flex;
+  gap: 10px;
+  border: thick solid black;
+}
+
+.Bottom {
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+
+.Left{
+  flex-grow: 1
+display:block;
+}
+
+
+
+.Right{
+  flex-grow: 2;
+  height: 100px
+}
+
+#title {
+  font-size: 48;
+  font-style: oblique;
+}
+
+@media screen and (max-width: 800px) {
+  .Phonesize {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+.product{
+
+  object-fit: cover;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+
 }
