@@ -1,0 +1,35 @@
+p {
+  font-size: large;
+  font-family: cursive;
+}
+
+.MediaBox {
+  display: grid;
+  grid-template-columns: 109px 109px 109px;
+  grid-template-rows: 109px;
+  justify-content: space-evenly;
+  justify-items: center;
+  align-content: space-evenly;
+  align-items: center;
+}
+
+.Left {
+Border: thick solid black;
+
+
+}
+
+.Middle {
+Border: thick solid black;
+
+
+}
+
+.Right {
+Border: thick solid black;
+
+}
+
+.ProfilePic {
+  border: 12px solid #555;
+}
